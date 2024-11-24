@@ -246,7 +246,7 @@ header .buttons button:hover{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 120vh;
+    height: auto;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -256,7 +256,7 @@ header .buttons button:hover{
 }
 
 .rewiews-block.fullscreen {
-    background: linear-gradient(45deg,#DBD2FB, #beb3e5);
+    background-color: #DBD2FB;
     color: #fff; /* Новый цвет текста */
     position: relative;
     padding-top: 50px;
@@ -359,7 +359,79 @@ header .buttons button:hover{
     filter: blur(0px);
 }
 
+.news{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #1b1b1b80;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 32px;
+    user-select: none;
+}
 
+.news .title{
+    font-size: 80px;
+    font-weight: 300;
+    color: #1b1b1b;
+    padding-bottom: 32px;
+}
+
+.news-card{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #1b1b1b30;
+    padding-bottom: 24px;
+}
+
+.news-card img{
+    max-width: 320px;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.news-card .date-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card .date-block .day{
+    font-size: 38px;
+    font-weight: 400;
+    color: #1b1b1b;
+}
+
+.news-card .date-block .my{
+    font-size: 20px;
+    color: #1b1b1b;
+    width: 200px;
+    font-weight: 400;
+}
+
+.news-card .text{
+    height: 100%;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1b1b1b;
+}
+
+#load-more-news{
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    border: none;
+    padding: 22px 40px;
+    color: #1b1b1b;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#load-more-news:hover{
+    background-color: #ededed;
+}
 
 .footer{
     height: 100vh;
