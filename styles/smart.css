@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
     background: rgb(44, 44, 44);        /* цвет дорожки */
   }
   body::-webkit-scrollbar-thumb {
-    background-color: #A1D76C;    /* цвет плашки */
+    background-color: #ffffff;    /* цвет плашки */
     border-radius: 1px;       /* закругления плашки */
   }
 
@@ -24,7 +24,7 @@ body{
 .header-content{
     background-image: url(../resources/images/bg.png);
     background-size: cover;
-    height: 1100px;
+    height: 1200px;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -126,13 +126,26 @@ header .buttons button:hover{
     margin-right: -50px;
     padding-top: 20px;
     padding-bottom: 20px;
-    scrollbar-width: none; /* Для Firefox */
     scroll-snap-type: x mandatory;
 }
 
 .demo-card-block::-webkit-scrollbar {
-    display: none; /* Для Chrome, Safari и Opera */
-}
+    height: 8px;               /* ширина scrollbar */
+  }
+.demo-card-block::-webkit-scrollbar-track {
+    background: rgb(44, 44, 44, 0);        /* цвет дорожки */
+  }
+.demo-card-block::-webkit-scrollbar-thumb {
+    background-color: #ffffff50;    /* цвет плашки */
+    border-radius: 9px;       /* закругления плашки */
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .demo-card-block::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;    /* цвет плашки */
+    border-radius: 9px;       /* закругления плашки */
+  }
 
 .demo-card{
     position: relative;
@@ -226,4 +239,128 @@ header .buttons button:hover{
     border-radius: 100px;
     text-decoration: none;
     color: #ffffff;
+}
+
+
+.rewiews-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 120vh;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: all 0.5s ease;
+}
+
+.rewiews-block.fullscreen {
+    background: linear-gradient(45deg,#DBD2FB, #beb3e5);
+    color: #fff; /* Новый цвет текста */
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: all 0.5s ease;
+}
+
+
+.rewiews-block .title{
+    z-index: -1;
+    position: sticky;
+    color: #DBD2FB;
+    top: 50vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    font-size: 100px;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.rewiews-block.fullscreen .title{
+    z-index: 0;
+    position: sticky;
+    color: #ffffff;
+    top: 50vh;
+    width: 100%;
+    justify-content: end;
+    display: flex;
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.rewiew{
+    z-index: 1;
+    background-color: #ffffff;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    max-width: 500px;
+    max-height: auto;
+    border: 1px solid #d0c4fb;
+    box-shadow: 0px 0px 40px #d0c4fb40;
+    color: #1b1b1b;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    cursor: pointer;
+    transition: all .3s;
+    right: 0px;
+}
+
+.rewiew:hover{
+    scale: 1.025;
+    transform: translateX(1vw);
+}
+
+
+.rewiew:nth-child(even) {
+    transform: translateX(3vw);
+}
+
+.rewiew:nth-child(even):hover{
+    transform: translateX(4vw);
+}
+
+.rewiews-block .rewiew img {
+    width: auto;
+    height: 70px;
+    border-radius: 1000px;
+    object-fit: cover;
+}
+
+.rewiews-block .rewiew .content{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+}
+
+.rewiews-block .rewiew .content .name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #1b1b1b80;
+}
+
+.rewiews-block .rewiew .content .text{
+    color: #1b1b1b;
+    opacity: 0.95;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 17px;
+    filter: blur(4px);
+    transition: all .2s;
+}
+
+.rewiew .content .text:hover{
+    filter: blur(0px);
+}
+
+
+
+.footer{
+    height: 100vh;
 }
