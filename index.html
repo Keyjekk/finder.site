@@ -235,8 +235,6 @@
                 </div>
             </div>
     </div>
-    <p>* здесь типо преимущества будут, ладно?</p>
-    <p>* А здесь типо предложение регистрации, ладно?</p>
     <div class="news">
         <p class="title">Новости</p>
         <div class="news-card">
@@ -308,12 +306,12 @@
         <button id="load-more-news">Загрузить ещё</button>
     </div>
 
-    <div class="footer">* здесь типо футер будет, ладно?</div>
+    <div class="footer"></div>
     <script>
         document.addEventListener('scroll', function() {
     const reviewsBlock = document.querySelector('.rewiews-block');
     const scrollPosition = window.scrollY + window.innerHeight;
-    const elementPosition = reviewsBlock.offsetTop + (reviewsBlock.offsetHeight * 0.6);
+    const elementPosition = reviewsBlock.offsetTop + (reviewsBlock.offsetHeight * 0.4);
 
     if (scrollPosition >= elementPosition) {
         reviewsBlock.classList.add('fullscreen');
