@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "InterItalic";
+    src: url(../resources/fonts/ttf/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../resources/fonts/ttf/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "RobotoItalic";
+    src: url(../resources/fonts/ttf/RobotoMono-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../resources/fonts/ttf/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "ISansItalic";
+    src: url(../resources/fonts/ttf/InstrumentSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "ISans";
+    src: url(../resources/fonts/ttf/InstrumentSans-VariableFont_wdth\,wght.ttf);
+}

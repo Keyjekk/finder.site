@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;               /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: rgb(44, 44, 44);        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;    /* цвет плашки */
+    border-radius: 1px;       /* закругления плашки */
+  }
+
+body{
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 28px;
+    background-color: #ffffff;
+}
+
+.header__wrapper{
+    position: relative;
+    padding: 8vh 15vw;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.header__wrapper .burger{
+    position: absolute;
+    top: 8vh;
+    right: 15vw;
+    width: 5vw;
+}
+
+.header__wrapper .slogan{
+    width: -webkit-fill-available;
+    font-family: "InterItalic";
+    font-size: 6.15vw;
+    letter-spacing: 2%;
+    font-weight: 800;
+    text-align: center;
+}
+
+.header__wrapper .arrow{
+    position: absolute;
+    bottom: 5vh;
+    width: 14vw;
+    animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown { 
+    0% { transform: translateY(0); } 
+    50% { transform: translateY(-1vh); } 
+    100% { transform: translateY(0); } 
+}
+
+.header__wrapper form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    gap: 1vw;
+    margin-top: 10vh;
+}
+
+.header__wrapper form input[type="text"]{
+    background-color: #ffffff00;
+    border-radius: 0.15vw;
+    border: 0.2vw solid #000000;
+    height: 8vh;
+    width: 100%;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+    font-family: "Inter";
+    font-weight: 400;
+    color: #000000;
+}
+
+.header__wrapper button{
+    background-color: #000000;
+    border: 0.2vw solid #000000;
+    height: 100%;
+    padding: 2vh 5vw;
+    color: #ffffff;
+    font-size: 1.2vw;
+    font-weight: 350;
+    letter-spacing: 0.1vw;
+    border-radius: 0.15vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.header__wrapper button:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 5vw #00000055;
+}
+
+/* Мобильные устройства (пейзажная ориентация) */
+@media (min-width: 0px) and (max-width: 480px) {
+    
+}
+
+/* Мобильные устройства (портретная ориентация) */
+@media (min-width: 481px) and (max-width: 767px) {
+   
+}
+
+/* Небольшие экраны (ноутбуки) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+   
+}
+
+/* Средние экраны (десктопы) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    
+}
+
+/* Большие экраны (широкоформатные мониторы) */
+@media (min-width: 1441px) {
+    
+}
