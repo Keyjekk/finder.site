@@ -27,3 +27,13 @@
     font-family: "ISans";
     src: url(../resources/fonts/ttf/InstrumentSans-VariableFont_wdth\,wght.ttf);
 }
+
+@font-face {
+    font-family: "JostItalic";
+    src: url(../resources/fonts/ttf/Jost-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(../resources/fonts/ttf/Jost-VariableFont_wght.ttf);
+}

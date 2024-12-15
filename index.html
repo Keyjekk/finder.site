@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="resources/images/icon.png" type="image/x-icon"> <!-- Подключение иконки сайта -->
-    <link rel="stylesheet" href="styles/style.css?v1.4"> <!-- Подключение основных стилей -->
+    <link rel="stylesheet" href="styles/style.css?v1.0"> <!-- Подключение основных стилей -->
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Подключение шрифтов -->
     <script src="scripts/index.js"></script> <!-- Подключение базовых скриптов -->
     <script src="https://kit.fontawesome.com/69be7250e1.js" crossorigin="anonymous"></script> <!-- Font Awesome (иконки)-->
@@ -13,15 +13,98 @@
 <body>
     <div class="header__wrapper">
         <img src="resources/images/svg/burger.svg" alt="burger" class="burger">
-        <p class="slogan">LET'S FIND YOUR TEAM</p>
+        <p class="slogan">LET'S FIND <span>YOUR</span> TEAM</p>
         <form action="" method="get">
-            <input type="text" name="s" id="search" placeholder="Что Вас интересует?">
+            <input type="text" name="search" id="search" placeholder="Что Вас интересует?">
             <button type="submit">Поиск</button>
         </form>
         <img src="resources/images/svg/arrow.svg" alt="arrow" class="arrow">
     </div>
-    <div class="rewiews">
-
+    <div class="about">
+        <div class="row">
+            <div class="col">
+                <p class="title">ВМЕСТО ТЫСЯЧИ СЛОВ</p>
+                <p class="text">Краткая видео-экскурсия по нашему сервису</p>
+            </div>
+            <div class="col">
+                <div class="video-wrapper"> 
+                    <video id="video" autoplay loop muted> 
+                        <source src="resources/videos/background.mp4" type="video/mp4"> Your browser does not support the video tag. 
+                    </video>
+                </div>
+                <video id="video2" autoplay loop muted> 
+                    <source src="resources/videos/background.mp4" type="video/mp4"> Your browser does not support the video tag. 
+                </video>
+            </div>
+        </div>
     </div>
+    <div class="rewiews">
+        <div class="shadow1"></div>
+        <div class="shadow2"></div>
+        <div class="row">
+            <div class="col">
+                <div class="card-rewiew">
+                    <p class="name">Анна, маркетолог</p>
+                    <p class="rewiew">Отличный сервис! Нашла команду мечты всего за пару дней. Очень довольна результатом!</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Иван, разработчик</p>
+                    <p class="rewiew">Сервис помог мне найти профессионалов для моего проекта. Теперь работа идет намного быстрее и эффективнее.</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Екатерина, менеджер</p>
+                    <p class="rewiew">Очень удобный и интуитивно понятный интерфейс. Быстро нашла нужных специалистов для своей команды.</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Алексей, аналитик</p>
+                    <p class="rewiew">Сервис превзошел все мои ожидания. Нашел отличных коллег для совместной работы над проектами.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-rewiew">
+                    <p class="name">Мария, дизайнер</p>
+                    <p class="rewiew">Прекрасный опыт! Очень быстро нашла единомышленников и начала работать над интересными проектами.</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Сергей, программист</p>
+                    <p class="rewiew">Сервис помог мне найти команду профессионалов. Теперь мы работаем над крупным проектом вместе.</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Ольга, копирайтер</p>
+                    <p class="rewiew">Очень довольна результатом. Нашла отличных коллег для совместной работы над контентом.</p>
+                </div>
+                <div class="card-rewiew">
+                    <p class="name">Дмитрий, дизайнер</p>
+                    <p class="rewiew">Это просто что-то! Так классно реализовали поиск единомышленников, очень быстро сформировал активную и креативную команду.</p>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="join-block">
+        <p class="title">JOIN US RIGHT <span>NOW</span></p>
+        <form action="" method="post" class="form-container">
+            <input type="text" name="name" id="name" placeholder="Как к Вам обращаться?"> 
+            <input type="text" name="country" id="country" placeholder="Из какой Вы страны?"> 
+            <input type="email" name="mail" id="mail" placeholder="Email"> 
+            <input type="text" name="speciality" id="speciality" placeholder="Специальность"> 
+            <input type="text" name="about" id="about" placeholder="Расскажите немного о себе">
+            <button type="submit">Продолжить</button>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="links">
+            <a href="https://t.me/VE_N_IK"><img src="resources/images/TelegramApp.png" alt=""></a>
+            <a href="https://t.me/VE_N_IK"><img src="resources/images/TwitterX.png" alt=""></a>
+            <a href="https://t.me/VE_N_IK"><img src="resources/images/GitHub.png" alt=""></a>
+        </div>
+        <p>© Finder Systems, 2025</p>
+    </div>
+    <script>
+
+    document.getElementById('video').addEventListener('click', function() { 
+        this.classList.toggle('fullscreen');
+    }); 
+    
+    </script>
 </body>
 </html>

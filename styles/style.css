@@ -14,11 +14,27 @@ body::-webkit-scrollbar {
     border-radius: 1px;       /* закругления плашки */
   }
 
+:root{
+    --bg-col-1: #161616;
+    --bg-col-2: #0D0D0D;
+    --title-col: #E5E5E5;
+    --input-col-text: #8A8A8A;
+    --border-col: #454545;
+    --brand-col: #FF6200;
+    --brand-col-opacity: #FF620030;
+    --subtitle-col: #8A8A8A;
+    --card-rewiew-col: #FFFFFF30;
+    --subtitle-col-2: #FFFFFF50;
+
+    --input-r: 2vh;
+    --block-r: 4vh;
+}
+
 body{
     font-family: "Inter";
     font-weight: 700;
     font-size: 28px;
-    background-color: #ffffff;
+    background-color: var(--bg-col-1);
 }
 
 .header__wrapper{
@@ -37,15 +53,22 @@ body{
     top: 8vh;
     right: 15vw;
     width: 5vw;
+    cursor: pointer;
 }
 
 .header__wrapper .slogan{
     width: -webkit-fill-available;
     font-family: "InterItalic";
-    font-size: 6.15vw;
+    font-size: 6.1vw;
     letter-spacing: 2%;
     font-weight: 800;
     text-align: center;
+    color: var(--title-col);
+}
+
+.header__wrapper .slogan span{
+    color: var(--brand-col);
+    text-shadow: 0px 0px 128px var(--brand-col);
 }
 
 .header__wrapper .arrow{
@@ -71,37 +94,293 @@ body{
 }
 
 .header__wrapper form input[type="text"]{
-    background-color: #ffffff00;
-    border-radius: 0.15vw;
-    border: 0.2vw solid #000000;
+    background-color: var(--bg-col-2);
+    border-radius: var(--input-r);
+    border: 0.1vw solid var(--border-col);
     height: 8vh;
     width: 100%;
     padding: 1vh 2vw;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-family: "Inter";
-    font-weight: 400;
-    color: #000000;
+    font-weight: 300;
+    color: var(--input-col-text);
+    transition: all .2s;
 }
 
 .header__wrapper button{
-    background-color: #000000;
-    border: 0.2vw solid #000000;
+    background-color: var(--brand-col);
     height: 100%;
+    border: none;
     padding: 2vh 5vw;
-    color: #ffffff;
+    color: var(--bg-col-1);
     font-size: 1.2vw;
-    font-weight: 350;
+    font-family: "Inter";
+    font-weight: 600;
     letter-spacing: 0.1vw;
-    border-radius: 0.15vw;
+    border-radius: var(--input-r);
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: all .2s;
+    opacity: 0.6;
 }
 
 .header__wrapper button:hover{
     scale: 1.02;
-    box-shadow: 0px 0px 5vw #00000055;
+    box-shadow: 0px 0px 5vw var(--brand-col-opacity);
+    background-color: var(--brand-col);
+    opacity: 1;
+}
+
+.about { 
+    margin-top: 20vh;
+    position: relative;
+    background-color: var(--bg-col-2);
+    height: 70vh;
+    width: -webkit-fill-available;
+    border-top: 1px solid var(--border-col);
+    color: var(--title-col);
+} 
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    padding: 0 15vw;
+    z-index: 2;
+}
+
+.row .col{
+    margin-top: 15vh;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    align-items: center;
+}
+
+.row .col .title{
+    font-family: "Inter";
+    font-size: 2.2vw;
+    letter-spacing: 0.1vw;
+    font-weight: 700;
+    color: var(--title-col);
+}
+
+.row .col .text{
+    font-family: "Inter";
+    font-size: 1.6vw;
+    font-weight: 400;
+    width: 25vw;
+    color: var(--subtitle-col);
+}
+
+.video-wrapper { 
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    height: 20vw; 
+    z-index: 2;
+} 
+
+.video-wrapper #video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: var(--block-r);
+}
+
+#video2{
+    position: absolute;
+    width: 33vw; 
+    height: 41vh; 
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    filter: blur(4vw);
+    opacity: 0.5;
+    border-radius: var(--block-r);
+}
+
+video.fullscreen { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    transform: none; 
+    z-index: 9999; 
+}
+
+.rewiews{
+    background-color: var(--brand-col);
+    height: 100vh;
+    position: relative;
+    border-bottom: 1px solid var(--border-col);
+}
+
+.rewiews .shadow1{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--bg-col-2), #00000000);
+    z-index: 0;
+}
+
+.rewiews .shadow2{
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--brand-col), #00000000);
+    opacity: 0.3;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card-rewiew{
+    background-color: var(--card-rewiew-col);
+    border-radius: var(--input-r);
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-bottom: 2vh;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.card-rewiew:hover{
+    z-index: 3;
+    scale: 1.025;
+}
+
+.card-rewiew .name{
+    color: var(--subtitle-col-2);
+    font-size: 2vh;
+    font-family: "Inter";
+    font-weight: 450;
+}
+
+.card-rewiew .rewiew{
+    color: var(--title-col);
+    font-size: 2.3vh;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+.join-block{
+    padding: 10vh 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.join-block .title{
+    color: var(--title-col);
+    font-size: 6.1vw;
+    width: -webkit-fill-available;
+    text-align: center;
+    letter-spacing: 1.2vh;
+}
+
+.join-block .title span{
+    color: var(--brand-col);
+    text-shadow: 0px 0px 128px var(--brand-col);
+}
+
+.form-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 5vh;
+} 
+
+.form-container input { 
+    flex: 1 1 calc(50% - 10px); 
+    box-sizing: border-box;
+    height: 8vh; 
+    background-color: var(--bg-col-2);
+    border-radius: var(--input-r);
+    border: 1px solid var(--border-col);
+    color: var(--input-col-text);
+    padding: 1vh 2vw;
+    font-size: 1.3vw;
+    font-family: "Inter";
+    font-weight: 300;
+    transition: all .2s;
+} 
+
+.form-container input:hover{
+    border: 1px solid var(--brand-col);
+}
+
+.form-container button{
+    flex: 1 1 100%;
+    background-color: var(--brand-col);
+    height: 100%;
+    border: none;
+    padding: 2vh 5vw;
+    color: var(--bg-col-1);
+    font-size: 1.2vw;
+    font-family: "Inter";
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    border-radius: var(--input-r);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+    opacity: 0.6;
+    margin-top: 5vh;
+}
+
+.form-container button:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 5vw var(--brand-col-opacity);
+    background-color: var(--brand-col);
+    opacity: 1;
+}
+
+.footer{
+    border-top: 1px solid var(--border-col);
+    background-color: var(--bg-col-2);
+    padding: 5vh 15vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.footer .links{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.footer .links a img{
+    width: 2vw;
+}
+
+.footer .links a{
+    opacity: 0.5;
+    transition: all .3s;
+}
+
+.footer .links a:hover{
+    opacity: 1;
+}
+
+.footer p{
+    color: var(--border-col);
+    font-family: "Inter";
+    font-size: 1vw;
 }
 
 /* Мобильные устройства (пейзажная ориентация) */
